@@ -64,6 +64,8 @@ func (r *HTTPClient) Post(u *url.URL) (*http.Request, error) {
 		return nil, err
 	}
 
+	r.Headers["Content-Type"] = "application/x-www-form-urlencoded"
+
 	return req, nil
 }
 
